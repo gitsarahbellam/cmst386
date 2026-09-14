@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMST 386 Project 3 - LESS Preprocessing</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!--
+    LESS preprocessing:
+    I used the LESS compiler with Node.js to compile project3.less
+    into project3.css. The LESS file contains variables, a mixin,
+    functions, operators, and nested variables. The compiled CSS
+    file is linked below and is used by the browser.
+    
+    Source file: project3.less
+    Compiled file: project3.css
+    -->
+    <link rel="stylesheet" href="project3.css">
+</head>
+
+<body id="top">
+
+    <header>
+        <h1>LESS CSS Preprocessing</h1>
+
+        <nav aria-label="Main navigation">
+    <button class="menu-toggle" aria-label="Open navigation">
+        ☰
+    </button>
+
+    <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="project3.html">Project 3</a></li>
+    </ul>
+</nav>
+    </header>
+
+    <main>
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="../index.html">Home</a>
+            <span aria-hidden="true"> &gt; </span>
+            <a href="project3.html">Project 3</a>
+            <span aria-hidden="true"> &gt; </span>
+            <span>Preprocessing</span>
+        </nav>
+
+        <section>
+            <h2>Client-Side and Server-Side Preprocessing</h2>
+
+            <p>CSS preprocessing can be implemented on the client side or the server side.
+                With client-side preprocessing, the user's browser performs the conversion
+                from a preprocessor language such as LESS into CSS. With server-side
+                preprocessing, the LESS or SASS source is compiled before the CSS is delivered
+                to the user's browser. In this project, LESS is compiled during development
+                using the LESS compiler and Node.js, creating a CSS file that the browser can
+                use to display the website.
+            </p>
+        </section>
+
+        <section>
+            <h2>LESS Mechanisms</h2>
+
+            <p>LESS provides several mechanisms that make CSS easier to organize, reuse,
+               and maintain. Variables store values such as colors, spacing, or font sizes
+               under reusable names, allowing changes to be made in one location. Mixins
+               are reusable groups of CSS declarations that can be applied to multiple
+               selectors. Functions perform operations on values, such as lightening or
+               darkening a color. Operators allow LESS to perform calculations using values,
+               which can be useful for determining dimensions or spacing. Nested variables
+               organize related values into groups, making a stylesheet easier to manage.
+               These features reduce repetitive code and make it easier to make consistent
+               design changes throughout a website.
+            </p>
+        </section>
+
+        <p><a href="#top">Back to Top</a></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CMST 386</p>
+    </footer>
+
+    <script src="project3.js"></script>
+
+</body>
+
+</html>

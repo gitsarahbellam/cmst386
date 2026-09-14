@@ -1,0 +1,140 @@
+@colors: {
+    primary: #336699;
+    secondary: #f4f7fa;
+    text: #222222;
+    white: #ffffff;
+};
+
+@max-width: 1100px;
+@spacing: 20px;
+@border-radius: 10px;
+@content-width: @max-width - (@spacing * 2);
+
+.button-style() {
+    border-radius: @border-radius;
+    padding: 12px 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: "Open Sans", Arial, sans-serif;
+    color: @colors[text];
+    background-color: @colors[secondary];
+}
+
+main {
+    width: 90%;
+    max-width: @content-width;
+    margin: 0 auto;
+    padding: @spacing;
+    box-sizing: border-box;
+    flex: 1;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: @spacing;
+}
+
+header {
+    background-color: @colors[primary];
+    color: @colors[white];
+    padding: 20px;
+    text-align: center;
+    box-sizing: border-box;
+    min-height: 126px;
+
+    h1 {
+        margin: 0 0 @spacing 0;
+        line-height: 1.2;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: @colors[white];
+    font-size: 28px;
+    cursor: pointer;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: @spacing;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: @colors[white];
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.breadcrumbs a {
+    color: @colors[text];
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+.learn-button {
+    .button-style();
+    background: linear-gradient(
+        135deg,
+        @colors[primary],
+        lighten(@colors[primary], 15%)
+    );
+    color: @colors[white];
+}
+
+@media (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+
+    nav ul {
+        gap: 12px;
+    }
+
+    .content-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin: 0 auto;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+        nav ul.show {
+        display: flex;
+    }
+}
+
+footer {
+    margin-top: 60px;
+    padding: 0 @spacing;
+}
